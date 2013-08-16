@@ -11,3 +11,8 @@
 *.lai
 *.la
 *.a
+
+app/mgt
+mgt/mgt-dump
+mgt/test
+

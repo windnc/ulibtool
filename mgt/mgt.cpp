@@ -93,8 +93,9 @@ bool CUMGT::Insert( char *key, char *content )
 	CUMGTInfo info;
 
 	info.start = ftell( content_file.GetFP() );
-	fprintf( content_file.GetFP(), "%s\n", content );
+	fprintf( content_file.GetFP(), "%s", content );
 	info.end = ftell( content_file.GetFP() );
+	fprintf( content_file.GetFP(), "\n" );
 
 	info_map[ key ] = info;
 
@@ -112,8 +113,8 @@ bool CUMGT::Insert( char *key, char *content, int len )
 
 	info.start = ftell( content_file.GetFP() );
 	fwrite( content, 1, len, content_file.GetFP()  );
-	fprintf( content_file.GetFP(), "\n" );
 	info.end = ftell( content_file.GetFP() );
+	fprintf( content_file.GetFP(), "\n" );
 
 	info_map[ key ] = info;
 
