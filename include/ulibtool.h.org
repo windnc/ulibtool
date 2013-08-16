@@ -1,0 +1,6 @@
+#ifndef ___ulibtool___
+#define ___ulibtool___
+
+#include "mgt.h"
+
+#endif
